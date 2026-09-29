@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Real data never goes into git
+data/raw/*
+!data/raw/.gitkeep
+
+# Scan outputs (database, exports, redacted copies, logs)
+output/*
+!output/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

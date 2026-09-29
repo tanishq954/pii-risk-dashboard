@@ -1,0 +1,9 @@
+Ticket #483968 - KYC update request
+
+Customer Nisha Gole has requested an update to their KYC records.
+Aadhaar number provided: 8932 5914 0846
+PAN provided: ZGFPG3119D
+Registered mobile: +91 73426 69806
+Email on file: nisha.gole@outlook.com
+
+Agent note: documents verified, please close the ticket after the update.

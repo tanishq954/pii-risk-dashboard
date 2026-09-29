@@ -1,0 +1,20 @@
+Acme Bharat Pvt Ltd - Salary Slip for March 2023
+
+Employee Name: Elijah Mannan
+Employee ID: ABP21991
+Designation: Analyst
+PAN: GVDPM0493E
+Bank: Canara Bank
+Bank Account No: 9331265281007498
+IFSC: CNRB0575247
+
+Earnings
+Basic Salary: INR 1,35,000
+HRA: INR 54,000
+Special Allowance: INR 33,750
+Deductions
+Provident Fund: Rs. 16,200
+TDS: ₹13,500
+Net Pay: ₹1,93,050
+
+This is a system generated payslip and does not require a signature.

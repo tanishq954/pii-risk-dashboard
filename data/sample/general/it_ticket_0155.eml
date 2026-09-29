@@ -1,0 +1,13 @@
+From: itdesk@acmebharat.in
+To: team@acmebharat.in
+Subject: VPN connectivity issue
+Date: Tue, 19 Apr 2022 14:28:00 +0000
+Message-ID: <9746997757@acmebharat.in>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+IT ticket #69531
+Laptop of Aditya Misra is unable to connect to the VPN.
+Last seen IP address: 10.195.236.171
+Resolution: reinstalled the VPN client and reset the certificate.

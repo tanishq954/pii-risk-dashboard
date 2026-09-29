@@ -1,0 +1,13 @@
+From: itdesk@acmebharat.in
+To: team@acmebharat.in
+Subject: VPN connectivity issue
+Date: Fri, 28 Jun 2024 18:07:00 +0000
+Message-ID: <6349037858@acmebharat.in>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+IT ticket #78756
+Laptop of Vrinda Chand is unable to connect to the VPN.
+Last seen IP address: 10.36.212.157
+Resolution: reinstalled the VPN client and reset the certificate.

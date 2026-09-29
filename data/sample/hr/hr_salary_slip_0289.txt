@@ -1,0 +1,20 @@
+Acme Bharat Pvt Ltd - Salary Slip for November 2022
+
+Employee Name: Jalsa Parsa
+Employee ID: ABP62054
+Designation: HR Executive
+PAN: WMLPP7802M
+Bank: HDFC Bank
+Bank Account No: 15272375435
+IFSC: HDFC0320736
+
+Earnings
+Basic Salary: Rs. 2,20,000
+HRA: Rs. 88,000
+Special Allowance: INR 55,000
+Deductions
+Provident Fund: INR 26,400
+TDS: ₹22,000
+Net Pay: ₹3,14,600
+
+This is a system generated payslip and does not require a signature.

@@ -1,0 +1,20 @@
+Acme Bharat Pvt Ltd - Salary Slip for May 2025
+
+Employee Name: Aarini Padmanabhan
+Employee ID: ABP60446
+Designation: Sales Manager
+PAN: KQQPP3076S
+Bank: HDFC Bank
+Bank Account No: 94791665914445
+IFSC: HDFC0017841
+
+Earnings
+Basic Salary: ₹1,53,000
+HRA: ₹61,200
+Special Allowance: INR 38,250
+Deductions
+Provident Fund: ₹18,360
+TDS: ₹15,300
+Net Pay: ₹2,18,790
+
+This is a system generated payslip and does not require a signature.

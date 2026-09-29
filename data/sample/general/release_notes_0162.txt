@@ -1,0 +1,5 @@
+Release notes - version 3.14.5
+- Improved dashboard loading time
+- Fixed an issue with CSV export encoding
+- Added dark mode to the settings page
+- Upgraded third-party libraries to patch known vulnerabilities

@@ -1,0 +1,9 @@
+Ticket #326274 - KYC update request
+
+Customer Shivani Prabhakar has requested an update to their KYC records.
+Aadhaar number provided: 936707217345
+PAN provided: WFJPP2172U
+Registered mobile: +91-7241983063
+Email on file: shivani.prabhakar@outlook.com
+
+Agent note: documents verified, please close the ticket after the update.

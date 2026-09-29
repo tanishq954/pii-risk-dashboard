@@ -1,0 +1,9 @@
+Ticket #577829 - KYC update request
+
+Customer Guneet Kari has requested an update to their KYC records.
+Aadhaar number provided: 715379260603
+PAN provided: YZEPK4081V
+Registered mobile: 07000297806
+Email on file: guneet.kari@hotmail.com
+
+Agent note: documents verified, please close the ticket after the update.

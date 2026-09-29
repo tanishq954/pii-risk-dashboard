@@ -1,0 +1,9 @@
+Ticket #543222 - KYC update request
+
+Customer Champak Rao has requested an update to their KYC records.
+Aadhaar number provided: 8535 8189 8571
+PAN provided: DVOPR2592C
+Registered mobile: +91 88688 23855
+Email on file: champak.rao@gmail.com
+
+Agent note: documents verified, please close the ticket after the update.

@@ -1,0 +1,9 @@
+Ticket #966945 - KYC update request
+
+Customer Jackson Jha has requested an update to their KYC records.
+Aadhaar number provided: 908855069433
+PAN provided: SUIPJ4358Z
+Registered mobile: +91-6010427974
+Email on file: jackson.jha75@yahoo.co.in
+
+Agent note: documents verified, please close the ticket after the update.

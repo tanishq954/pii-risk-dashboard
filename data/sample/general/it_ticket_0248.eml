@@ -1,0 +1,13 @@
+From: itdesk@acmebharat.in
+To: team@acmebharat.in
+Subject: VPN connectivity issue
+Date: Tue, 05 Nov 2024 18:42:00 +0000
+Message-ID: <5110255917@acmebharat.in>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+IT ticket #31660
+Laptop of Naveen Gour is unable to connect to the VPN.
+Last seen IP address: 10.152.157.200
+Resolution: reinstalled the VPN client and reset the certificate.

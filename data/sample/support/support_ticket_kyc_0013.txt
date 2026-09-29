@@ -1,0 +1,9 @@
+Ticket #334944 - KYC update request
+
+Customer Faqid Kibe has requested an update to their KYC records.
+Aadhaar number provided: 263757914529
+PAN provided: CDRPK2773G
+Registered mobile: +91-9931269789
+Email on file: faqid.kibe64@rediffmail.com
+
+Agent note: documents verified, please close the ticket after the update.

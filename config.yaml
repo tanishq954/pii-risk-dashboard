@@ -1,0 +1,119 @@
+# =====================================================================
+# PII Detector and Risk Dashboard - central configuration
+# Every tunable number used by the scanner, risk model and compliance
+# estimates lives here so it can be changed without touching code.
+# =====================================================================
+
+paths:
+  sample_dir: data/sample
+  raw_dir: data/raw
+  output_dir: output
+  db_file: pii_results.db          # created inside output_dir
+  exports_subdir: exports
+  redacted_subdir: redacted
+
+ingest:
+  max_text_length: 200000           # characters; longer texts are truncated and flagged
+  enron_default_limit: 5000
+  supported_extensions: [".eml", ".msg", ".txt", ".csv", ".xlsx", ".docx", ".pdf"]
+  exclude_file_names: ["ground_truth.csv", ".gitkeep", "README.md", "README_SYNTHETIC_DATA.txt"]
+  max_spreadsheet_rows: 5000        # per sheet, protects memory on huge exports
+
+detection:
+  language: en
+  spacy_model: en_core_web_lg
+  fallback_spacy_model: en_core_web_sm
+  min_score: 0.5                    # findings below this confidence are discarded
+  context_window_chars: 60          # how far before a value we look for context words
+  snippet_chars: 1500               # length of the masked text preview stored per document
+  # Entities we ask Presidio to return. Custom Indian recognizers + selected built-ins.
+  entities:
+    - IN_AADHAAR
+    - IN_PAN
+    - IN_IFSC
+    - IN_PHONE
+    - IN_UPI
+    - BANK_ACCOUNT
+    - SALARY
+    - HEALTH_INFO
+    - PERSON
+    - EMAIL_ADDRESS
+    - PHONE_NUMBER
+    - CREDIT_CARD
+    - US_SSN
+    - IBAN_CODE
+    - LOCATION
+    - DATE_TIME
+    - IP_ADDRESS
+
+risk:
+  # Sensitivity weight per entity type (0-10). File score = sum(weight x confidence).
+  weights:
+    IN_AADHAAR: 10
+    CREDIT_CARD: 10
+    HEALTH_INFO: 9
+    IN_PAN: 8
+    BANK_ACCOUNT: 8
+    US_SSN: 10
+    IBAN_CODE: 8
+    SALARY: 7
+    IN_UPI: 6
+    IN_PHONE: 4
+    PHONE_NUMBER: 4
+    IN_IFSC: 3
+    EMAIL_ADDRESS: 2
+    IP_ADDRESS: 2
+    PERSON: 1
+    LOCATION: 0
+    DATE_TIME: 0
+  # Stored in the database but ignored when scoring (too noisy on business text).
+  excluded_from_scoring: [DATE_TIME, LOCATION]
+  thresholds:
+    high: 40
+    medium: 15
+  max_score: 100
+  # Volume bonus: extra points when one file holds many sensitive records
+  # (a "sensitive record" is a finding whose weight >= sensitive_weight_min).
+  volume_bonus:
+    sensitive_weight_min: 6
+    tiers:                           # [minimum sensitive records, bonus points]
+      - [10, 10]
+      - [50, 20]
+      - [200, 30]
+  # Toxic combination: a person/identifier together with health, salary or
+  # financial data is forced to at least High.
+  toxic_combination:
+    identity_entities: [PERSON, IN_AADHAAR, IN_PAN, EMAIL_ADDRESS, IN_PHONE, PHONE_NUMBER, US_SSN]
+    sensitive_entities: [HEALTH_INFO, SALARY, BANK_ACCOUNT, CREDIT_CARD, IN_UPI, IBAN_CODE]
+
+compliance:
+  disclaimer: "Illustrative estimate for demonstration only, not legal advice."
+  dpdp:
+    # Digital Personal Data Protection Act 2023 - Schedule of penalties (INR crore)
+    max_penalty_security_safeguards_crore: 250
+    other_penalties_crore:
+      "Failure to notify a personal data breach": 200
+      "Breach of obligations for children's data": 200
+      "Breach of Significant Data Fiduciary obligations": 150
+      "Breach of any other provision": 50
+  gdpr:
+    # Article 83(5): up to EUR 20 million or 4% of worldwide annual turnover, whichever is higher
+    fixed_cap_eur: 20000000
+    turnover_pct: 4
+    default_turnover_eur: 500000000
+  eur_to_inr: 90.0                   # illustrative conversion rate, edit as needed
+  exposure_index:
+    reference_individuals: 100000    # unique individuals that saturate the scale component
+    scale_weight: 60                 # points available for the number of individuals
+    severity_weight: 40              # points available for how severe the data is
+  # Entity types used to approximate "unique individuals" (unique values are
+  # counted in memory with a keyed hash that is discarded after the scan).
+  individual_identifiers: [IN_AADHAAR, IN_PAN, EMAIL_ADDRESS, IN_PHONE, PHONE_NUMBER, CREDIT_CARD, BANK_ACCOUNT, US_SSN, IN_UPI, IBAN_CODE]
+
+remediation:
+  retention_years: 3                 # documents older than this with PII get a retention action
+  top_redacted_docs: 10
+
+evaluation:
+  # Entity types planted by the generator and measured for precision/recall.
+  evaluated_entities: [IN_AADHAAR, IN_PAN, IN_IFSC, IN_PHONE, IN_UPI, BANK_ACCOUNT, SALARY, HEALTH_INFO, EMAIL_ADDRESS, CREDIT_CARD, IP_ADDRESS, PERSON]

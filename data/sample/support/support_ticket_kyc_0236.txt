@@ -1,0 +1,9 @@
+Ticket #180282 - KYC update request
+
+Customer Chandran Soman has requested an update to their KYC records.
+Aadhaar number provided: 2112 0174 7483
+PAN provided: KVPPS9316N
+Registered mobile: 6942380212
+Email on file: chandran.soman89@hotmail.com
+
+Agent note: documents verified, please close the ticket after the update.

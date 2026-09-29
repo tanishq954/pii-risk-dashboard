@@ -1,0 +1,7 @@
+Meeting notes - Vendor portal
+Attendees: Product, Engineering, Finance
+
+1. Sprint velocity is stable; two stories were carried over.
+2. Budget utilisation is at 76 percent of the approved amount.
+3. Risks: dependency on the vendor API release and pending security review.
+4. Next steps: finalise the test plan and schedule a demo for the steering committee.

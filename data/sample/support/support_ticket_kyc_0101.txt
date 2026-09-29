@@ -1,0 +1,9 @@
+Ticket #443807 - KYC update request
+
+Customer Parth Iyer has requested an update to their KYC records.
+Aadhaar number provided: 485725629260
+PAN provided: HWHPI5625Q
+Registered mobile: 08138186550
+Email on file: parth.iyer@outlook.com
+
+Agent note: documents verified, please close the ticket after the update.

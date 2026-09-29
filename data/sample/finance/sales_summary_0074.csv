@@ -1,0 +1,17 @@
+Region,Quarter,Units Sold,Revenue (INR lakh),Target Achieved %
+North,Q1,4233,424,114
+North,Q2,3766,829,65
+North,Q3,4454,730,72
+North,Q4,1154,784,76
+South,Q1,3694,819,62
+South,Q2,545,217,67
+South,Q3,4461,228,106
+South,Q4,3399,427,71
+East,Q1,423,415,79
+East,Q2,3932,94,101
+East,Q3,1943,122,82
+East,Q4,1990,280,103
+West,Q1,3114,73,115
+West,Q2,4370,583,83
+West,Q3,3773,605,73
+West,Q4,4176,661,122

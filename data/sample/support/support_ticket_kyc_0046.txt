@@ -1,0 +1,9 @@
+Ticket #944848 - KYC update request
+
+Customer Bhavna Sarma has requested an update to their KYC records.
+Aadhaar number provided: 8389 0219 9471
+PAN provided: HNHPS3965O
+Registered mobile: 07234103469
+Email on file: bhavna.sarma30@gmail.com
+
+Agent note: documents verified, please close the ticket after the update.

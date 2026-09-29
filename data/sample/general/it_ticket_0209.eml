@@ -1,0 +1,13 @@
+From: itdesk@acmebharat.in
+To: team@acmebharat.in
+Subject: VPN connectivity issue
+Date: Thu, 28 Jan 2021 16:00:00 +0000
+Message-ID: <3335387866@acmebharat.in>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+IT ticket #65021
+Laptop of Pushti Kakar is unable to connect to the VPN.
+Last seen IP address: 10.91.211.12
+Resolution: reinstalled the VPN client and reset the certificate.

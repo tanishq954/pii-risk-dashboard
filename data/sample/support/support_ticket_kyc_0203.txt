@@ -1,0 +1,9 @@
+Ticket #937053 - KYC update request
+
+Customer Suhani Sura has requested an update to their KYC records.
+Aadhaar number provided: 7169 2175 1716
+PAN provided: WVEPS9066J
+Registered mobile: 8470500574
+Email on file: suhani.sura@gmail.com
+
+Agent note: documents verified, please close the ticket after the update.

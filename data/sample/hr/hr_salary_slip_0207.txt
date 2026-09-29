@@ -1,0 +1,20 @@
+Acme Bharat Pvt Ltd - Salary Slip for May 2024
+
+Employee Name: Ishita Bhatnagar
+Employee ID: ABP84700
+Designation: HR Executive
+PAN: AQAPB3150A
+Bank: Canara Bank
+Bank Account No: 329064199658402
+IFSC: CNRB0728272
+
+Earnings
+Basic Salary: INR 1,00,000
+HRA: ₹40,000
+Special Allowance: Rs. 25,000
+Deductions
+Provident Fund: Rs. 12,000
+TDS: Rs. 10,000
+Net Pay: Rs. 1,43,000
+
+This is a system generated payslip and does not require a signature.

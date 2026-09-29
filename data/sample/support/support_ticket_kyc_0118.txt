@@ -1,0 +1,9 @@
+Ticket #712951 - KYC update request
+
+Customer Bhavani Sen has requested an update to their KYC records.
+Aadhaar number provided: 769559227768
+PAN provided: IZCPS4892T
+Registered mobile: +91-6038502551
+Email on file: bhavani.sen@rediffmail.com
+
+Agent note: documents verified, please close the ticket after the update.

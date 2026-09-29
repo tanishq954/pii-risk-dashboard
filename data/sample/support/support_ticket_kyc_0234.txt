@@ -1,0 +1,9 @@
+Ticket #784780 - KYC update request
+
+Customer Maanas Ratti has requested an update to their KYC records.
+Aadhaar number provided: 3168 5952 4179
+PAN provided: QPJPR8039R
+Registered mobile: +91 75634 32510
+Email on file: maanas.ratti@gmail.com
+
+Agent note: documents verified, please close the ticket after the update.
