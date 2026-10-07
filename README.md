@@ -227,6 +227,43 @@ predicted as Low are callback lists where every phone and email was found but on
 under 15; the one Clean file predicted as Low is a project update in which spaCy tagged an ordinary word as a person
 (the single PERSON false positive).
 
+## Results on real data: the Enron emails
+
+Enron's mailboxes were made public by US regulators (FERC) during the investigation into the company's 2001 collapse,
+and they have been the standard eDiscovery test set ever since. Run with
+`python -m src.scan --source enron --path data/raw/emails.csv --limit 5000` (`en_core_web_lg`, 2 workers). There is no
+answer key for Enron, so these are observations, not accuracy figures.
+
+| Metric | Value |
+|---|---|
+| Emails scanned | 5,000 (0 skipped) in 164 s |
+| Emails with PII | 4,284 (86%) |
+| Risk levels | 266 High · 516 Medium · 3,502 Low · 716 Clean |
+| Toxic combinations | 125 emails |
+| Unique email addresses (≈ individuals) | 1,203 |
+| Exposure index | 41.9 / 100 (Moderate) |
+| Indian identifiers (Aadhaar, PAN, UPI, IFSC) | 0, as expected on US data |
+
+The first 5,000 rows of the Kaggle file cover only two mailboxes, so this is a slice, not a sample of the whole company.
+
+What the real data showed:
+
+* **True positive.** An employee emailed a personal Visa number, expiry date and home address from a work account to
+  pay for an eBay purchase. The card passed the Luhn check and was flagged. Personal financial data sitting in a corporate
+  mailbox is exactly the risk this tool is meant to surface.
+* **False positive: SSN.** One "US SSN" was the first part of a longer contact number (`XXX-XX-1642-718309`). Fix:
+  reject a match when more digits follow it.
+* **False positive: health keywords.** Spam ("want to lose weight?"), a movie-listings newsletter and a fantasy
+  football newsletter were tagged as health data, and the toxic-combination rule then pushed some to High. Fix:
+  require medical context, as the bank-account and salary recognizers already do, and down-weight newsletters.
+* **Names inflate scores.** Many High files are news digests and an audit summary with 100+ names, mostly public
+  figures rather than private individuals.
+* **Misses.** Some US phone formats such as `(713) 646-8235` were not detected, and street addresses have no
+  recognizer at all.
+* **Duplicates.** Only about half of the 5,000 emails are unique: the same message is stored in `sent_mail`,
+  `all_documents` and `discussion_threads`. Each copy carries the same PII and is scanned, stored and reviewed again,
+  which is why enterprise archives deduplicate before governing.
+
 ## Limitations
 
 * **Synthetic data flatters the model.** The templates are regular, so real-world accuracy will be lower. Names are the
